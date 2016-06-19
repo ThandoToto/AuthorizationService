@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security.DataProtection;
+using SimpleIdentityService.Config;
 using SimpleIdentityService.Models;
 using System;
 using System.Collections.Generic;
@@ -8,14 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleIdentityService.Config
+namespace SimpleIdentityService.Models.Managers
 {
     public class ServiceUserManager : UserManager<ServiceUser>
     {
+        public string ClientAppName { get; set; }
+
         public ServiceUserManager(IUserStore<ServiceUser> store, 
                                   IDataProtectionProvider dataProtectionProvider,
-                                  IEmailSetting emailSetting, 
-                                  string clientAppName)
+                                  IEmailSetting emailSetting)
             : base(store)
         {
             this.UserValidator = new UserValidator<ServiceUser>(this)
@@ -41,7 +43,12 @@ namespace SimpleIdentityService.Config
 
             if (dataProtectionProvider != null)
             {
-                this.UserTokenProvider = new DataProtectorTokenProvider<ServiceUser>(dataProtectionProvider.Create(clientAppName));
+                string clientApp;
+                if (!string.IsNullOrEmpty(ClientAppName))
+                    clientApp = "Client Application";
+                else
+                    clientApp = ClientAppName;
+                this.UserTokenProvider = new DataProtectorTokenProvider<ServiceUser>(dataProtectionProvider.Create(clientApp));
             }
         }
     }

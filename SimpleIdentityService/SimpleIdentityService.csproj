@@ -87,9 +87,14 @@
   <ItemGroup>
     <Compile Include="Config\EmailSetting.cs" />
     <Compile Include="Config\IEmailSetting.cs" />
-    <Compile Include="Config\ServiceUserManager.cs" />
+    <Compile Include="Models\Managers\ServiceUserManager.cs" />
+    <Compile Include="IdentityService.cs" />
     <Compile Include="IIdentityService.cs" />
     <Compile Include="Config\EmailService.cs" />
+    <Compile Include="Migrations\201606191132014_Initial Custom user.cs" />
+    <Compile Include="Migrations\201606191132014_Initial Custom user.Designer.cs">
+      <DependentUpon>201606191132014_Initial Custom user.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ServiceDbContext.cs" />
     <Compile Include="Models\ServiceUser.cs" />
@@ -100,8 +105,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\Managers\" />
     <Folder Include="Models\Stores\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201606191132014_Initial Custom user.resx">
+      <DependentUpon>201606191132014_Initial Custom user.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

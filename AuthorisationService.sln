@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleIdentityService", "Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleIdentityServiceTester", "ConsoleIdentityServiceTester\ConsoleIdentityServiceTester.csproj", "{B0EF246A-3698-42EF-AB9F-E9063291F5D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleIdentityService.Api", "SimpleIdentityService.Api\SimpleIdentityService.Api.csproj", "{36B2E32A-53A9-4B52-9E32-C0340DC0B649}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B0EF246A-3698-42EF-AB9F-E9063291F5D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0EF246A-3698-42EF-AB9F-E9063291F5D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0EF246A-3698-42EF-AB9F-E9063291F5D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B2E32A-53A9-4B52-9E32-C0340DC0B649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B2E32A-53A9-4B52-9E32-C0340DC0B649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B2E32A-53A9-4B52-9E32-C0340DC0B649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B2E32A-53A9-4B52-9E32-C0340DC0B649}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
