@@ -17,7 +17,8 @@ namespace ConsoleIdentityServiceTester
             string user = ConfigurationManager.AppSettings["emailuser"];
             string password = ConfigurationManager.AppSettings["emailpassword"];
             string fromAddress = ConfigurationManager.AppSettings["emailfrom"];
-            var email = new EmailService(server, user, password, fromAddress);
+            var emailsettings = new EmailSetting(server,user,password,fromAddress);
+            var email = new EmailService(emailsettings);
             email.SendAsync(new IdentityMessage { Destination = "thando@appziko.com", Body = $"Messge sent at {DateTime.Now.Minute}", Subject="Account created" });
             Console.ReadLine();
         }

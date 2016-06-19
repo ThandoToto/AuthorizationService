@@ -11,23 +11,20 @@ namespace SimpleIdentityService.Config
 {
     public class EmailService : IIdentityMessageService
     {
-        string _fromAddress, _emailServer, _emailUser, _emailPassword = string.Empty;
+        IEmailSetting _emailSetting;
 
-        public EmailService(string emailServer, string emailUser, string emailPassword, string emailFrom)
+        public EmailService(IEmailSetting emailSetting)
         {
-            _fromAddress = emailFrom;
-            _emailServer = emailServer;
-            _emailUser = emailUser;
-            _emailPassword = emailPassword;
+            _emailSetting = emailSetting;
         }
 
         public async Task SendAsync(IdentityMessage message)
         {
-            MailMessage mailMessage = new MailMessage(_fromAddress, message.Destination, message.Subject, message.Body);
+            MailMessage mailMessage = new MailMessage(_emailSetting.FromAddress, message.Destination, message.Subject, message.Body);
             mailMessage.IsBodyHtml = true;
 
-            SmtpClient client = new SmtpClient(_emailServer);
-            client.Credentials = new NetworkCredential(_emailUser, _emailPassword);
+            SmtpClient client = new SmtpClient(_emailSetting.Server);
+            client.Credentials = new NetworkCredential(_emailSetting.UserName, _emailSetting.Password);
             client.Send(mailMessage);
 
             await Task.FromResult<int>(0);

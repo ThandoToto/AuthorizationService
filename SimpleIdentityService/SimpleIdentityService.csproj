@@ -85,9 +85,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\EmailSetting.cs" />
+    <Compile Include="Config\IEmailSetting.cs" />
     <Compile Include="Config\ServiceUserManager.cs" />
     <Compile Include="IIdentityService.cs" />
     <Compile Include="Config\EmailService.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ServiceDbContext.cs" />
+    <Compile Include="Models\ServiceUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -95,7 +100,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Folder Include="Models\Managers\" />
+    <Folder Include="Models\Stores\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
