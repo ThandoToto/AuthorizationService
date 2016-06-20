@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin;
 using SimpleIdentityService.Common;
 using SimpleIdentityService.Models;
 using System;
@@ -13,5 +15,10 @@ namespace SimpleIdentityService
     {
         Task<ServiceUser> GetUserByEmail(string email);
         Task<IdentityResult> CreateUser(User user);
+        Task<SignInStatus> Login(IOwinContext context, string email, string password, bool rememberMe = false);
+        Task<IdentityResult> Reset(string userId);
+        Task<IdentityResult> RemoveUserWithEmail(string email);
+        Task<IdentityResult> RemoveUserWithId(string id);
+        Task<IdentityResult> UpdateUser(User user);
     }
 }

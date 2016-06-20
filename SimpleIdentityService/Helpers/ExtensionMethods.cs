@@ -16,7 +16,7 @@ namespace SimpleIdentityService.Helpers
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 PhoneNumber = user.Cell,
-                UserName = user.Username,
+                UserName = user.Email,
                 Email = user.Email
             };
         }

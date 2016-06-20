@@ -118,6 +118,7 @@
       <DependentUpon>201606191132014_Initial Custom user.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Managers\ServiceSignInManager.cs" />
     <Compile Include="Models\ServiceDbContext.cs" />
     <Compile Include="Models\ServiceUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
