@@ -29,9 +29,15 @@ namespace SimpleIdentityService.Api.Controllers
             string fromAddress = ConfigurationManager.AppSettings["emailfrom"];
             var emailsettings = new EmailSetting(server, user, password, fromAddress);
             //_service = service;
+            var dbContext = new ServiceDbContext();
+            var userStore = new UserStore<ServiceUser>(dbContext);
+            var userManager = new ServiceUserManager(userStore, Startup.DataProtectionProvider, emailsettings);
 
-            _service = new IdentityService(new ServiceUserManager(new UserStore<ServiceUser>(new ServiceDbContext()), Startup.DataProtectionProvider, emailsettings));
+            //var roleStore = new RoleStore<ServiceRole>(dbContext);
+            //var roleManager = new ServiceRoleManager(roleStore);
 
+            //_service = new IdentityService(userManager, roleManager);
+            _service = new IdentityService(userManager);
         }
 
         
@@ -53,5 +59,7 @@ namespace SimpleIdentityService.Api.Controllers
                 return Ok<IdentityResult>(result);
 
         }
+
+
     }
 }

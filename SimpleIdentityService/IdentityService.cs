@@ -21,8 +21,6 @@ namespace SimpleIdentityService
         public IdentityService(ServiceUserManager userManager)
         {
             _userManager = userManager;
-
-
         }
 
         public async Task<IdentityResult> CreateUser(User user)

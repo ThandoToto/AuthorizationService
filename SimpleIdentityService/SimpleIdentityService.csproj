@@ -109,6 +109,11 @@
     <Compile Include="Migrations\201606200213558_Readding fields.Designer.cs">
       <DependentUpon>201606200213558_Readding fields.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606200402012_Adding field to roles.cs" />
+    <Compile Include="Migrations\201606200402012_Adding field to roles.Designer.cs">
+      <DependentUpon>201606200402012_Adding field to roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Managers\ServiceRoleManager.cs" />
     <Compile Include="Models\Managers\ServiceUserManager.cs" />
     <Compile Include="IdentityService.cs" />
     <Compile Include="IIdentityService.cs" />
@@ -120,6 +125,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Managers\ServiceSignInManager.cs" />
     <Compile Include="Models\ServiceDbContext.cs" />
+    <Compile Include="Models\ServiceRole.cs" />
     <Compile Include="Models\ServiceUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606200213558_Readding fields.resx">
       <DependentUpon>201606200213558_Readding fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606200402012_Adding field to roles.resx">
+      <DependentUpon>201606200402012_Adding field to roles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
