@@ -1,4 +1,6 @@
-﻿using SimpleIdentityService.Models;
+﻿using Microsoft.AspNet.Identity;
+using SimpleIdentityService.Common;
+using SimpleIdentityService.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +12,6 @@ namespace SimpleIdentityService
     public interface IIdentityService
     {
         Task<ServiceUser> GetUserByEmail(string email);
+        Task<IdentityResult> CreateUser(User user);
     }
 }

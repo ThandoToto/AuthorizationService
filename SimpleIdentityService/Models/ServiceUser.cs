@@ -11,5 +11,6 @@ namespace SimpleIdentityService.Models
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public bool? ChangePassword { get; set; }
     }
 }

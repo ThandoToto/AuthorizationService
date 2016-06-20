@@ -15,7 +15,7 @@ namespace SimpleIdentityService.Models.Managers
     {
         public string ClientAppName { get; set; }
 
-        public ServiceUserManager(IUserStore<ServiceUser> store, 
+        public ServiceUserManager(IUserStore<ServiceUser> store,
                                   IDataProtectionProvider dataProtectionProvider,
                                   IEmailSetting emailSetting)
             : base(store)
@@ -29,8 +29,8 @@ namespace SimpleIdentityService.Models.Managers
             this.PasswordValidator = new PasswordValidator
             {
                 RequiredLength = 6,
-                RequireNonLetterOrDigit = true,
-                RequireDigit = true,
+                //RequireNonLetterOrDigit = true,
+                //RequireDigit = true,
                 RequireLowercase = true,
                 RequireUppercase = true,
             };
@@ -44,12 +44,24 @@ namespace SimpleIdentityService.Models.Managers
             if (dataProtectionProvider != null)
             {
                 string clientApp;
-                if (!string.IsNullOrEmpty(ClientAppName))
+                if (string.IsNullOrEmpty(ClientAppName))
                     clientApp = "Client Application";
                 else
                     clientApp = ClientAppName;
                 this.UserTokenProvider = new DataProtectorTokenProvider<ServiceUser>(dataProtectionProvider.Create(clientApp));
             }
+
+            //var dataProtectionProvider = options.DataProtectionProvider;
+            //if (dataProtectionProvider != null)
+            //{
+            //    string clientApp;
+            //    if (string.IsNullOrEmpty(ClientAppName))
+            //        clientApp = "Client Application";
+            //    else
+            //        clientApp = ClientAppName;
+            //    this.UserTokenProvider =
+            //        new DataProtectorTokenProvider<ServiceUser>(dataProtectionProvider.Create(clientApp));
+            //}
         }
     }
 }

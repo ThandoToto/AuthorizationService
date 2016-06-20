@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleIdentityServiceTeste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleIdentityService.Api", "SimpleIdentityService.Api\SimpleIdentityService.Api.csproj", "{36B2E32A-53A9-4B52-9E32-C0340DC0B649}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleIdentityServiceApi", "SimpleIdentityServiceApi\SimpleIdentityServiceApi.csproj", "{B45DC7C6-D920-4BB8-83BF-D36BFDB1125D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleIdentityService.Common", "SimpleIdentityService.Common\SimpleIdentityService.Common.csproj", "{9F827FC7-EB1F-4FA9-BEC8-296AAD773453}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{36B2E32A-53A9-4B52-9E32-C0340DC0B649}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36B2E32A-53A9-4B52-9E32-C0340DC0B649}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36B2E32A-53A9-4B52-9E32-C0340DC0B649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B45DC7C6-D920-4BB8-83BF-D36BFDB1125D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45DC7C6-D920-4BB8-83BF-D36BFDB1125D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B45DC7C6-D920-4BB8-83BF-D36BFDB1125D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B45DC7C6-D920-4BB8-83BF-D36BFDB1125D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F827FC7-EB1F-4FA9-BEC8-296AAD773453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F827FC7-EB1F-4FA9-BEC8-296AAD773453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F827FC7-EB1F-4FA9-BEC8-296AAD773453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F827FC7-EB1F-4FA9-BEC8-296AAD773453}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

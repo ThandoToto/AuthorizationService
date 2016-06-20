@@ -87,6 +87,28 @@
   <ItemGroup>
     <Compile Include="Config\EmailSetting.cs" />
     <Compile Include="Config\IEmailSetting.cs" />
+    <Compile Include="Helpers\ExtensionMethods.cs" />
+    <Compile Include="Helpers\Password.cs" />
+    <Compile Include="Migrations\201606192254082_Add ChangePassword field.cs" />
+    <Compile Include="Migrations\201606192254082_Add ChangePassword field.Designer.cs">
+      <DependentUpon>201606192254082_Add ChangePassword field.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606200113086_NotSure.cs" />
+    <Compile Include="Migrations\201606200113086_NotSure.Designer.cs">
+      <DependentUpon>201606200113086_NotSure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606200124462_Remove field.cs" />
+    <Compile Include="Migrations\201606200124462_Remove field.Designer.cs">
+      <DependentUpon>201606200124462_Remove field.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606200158091_Remove field Again.cs" />
+    <Compile Include="Migrations\201606200158091_Remove field Again.Designer.cs">
+      <DependentUpon>201606200158091_Remove field Again.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606200213558_Readding fields.cs" />
+    <Compile Include="Migrations\201606200213558_Readding fields.Designer.cs">
+      <DependentUpon>201606200213558_Readding fields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Managers\ServiceUserManager.cs" />
     <Compile Include="IdentityService.cs" />
     <Compile Include="IIdentityService.cs" />
@@ -111,6 +133,27 @@
     <EmbeddedResource Include="Migrations\201606191132014_Initial Custom user.resx">
       <DependentUpon>201606191132014_Initial Custom user.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606192254082_Add ChangePassword field.resx">
+      <DependentUpon>201606192254082_Add ChangePassword field.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606200113086_NotSure.resx">
+      <DependentUpon>201606200113086_NotSure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606200124462_Remove field.resx">
+      <DependentUpon>201606200124462_Remove field.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606200158091_Remove field Again.resx">
+      <DependentUpon>201606200158091_Remove field Again.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606200213558_Readding fields.resx">
+      <DependentUpon>201606200213558_Readding fields.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleIdentityService.Common\SimpleIdentityService.Common.csproj">
+      <Project>{9f827fc7-eb1f-4fa9-bec8-296aad773453}</Project>
+      <Name>SimpleIdentityService.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
